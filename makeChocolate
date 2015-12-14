@@ -1,0 +1,12 @@
+public int makeChocolate(int small, int big, int goal) {
+  int make = -1;
+  final int LARGE = 5;
+
+  if(goal/LARGE <= big){
+    if(goal - goal/LARGE*LARGE <= small){
+      make = goal-goal/LARGE*LARGE;}}
+
+  else if(goal/LARGE > big && goal <= small + big*LARGE){
+    make = goal - LARGE*big;}
+  return make;
+}
