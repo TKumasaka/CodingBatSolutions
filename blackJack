@@ -1,0 +1,14 @@
+public int blackjack(int a, int b) {
+  int val = 0;
+  if(a > 21 && b > 21){
+    val = 0;}
+  else if(a>21 && b <=21){
+    val = b;}
+  else if(a<=21 && b>21){
+    val = a;}
+  else if(21-a > 21-b){
+    val = b;}
+  else if(21-a < 21-b){
+    val = a;}
+  return val;
+}
