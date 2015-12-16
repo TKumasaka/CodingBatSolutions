@@ -1,0 +1,18 @@
+public String mixString(String a, String b) {
+  int length = 0;
+  String newS = "";
+  String end = "";
+    
+  if(b.length() > a.length()){
+    length = a.length();
+    end = (b.substring(length));}
+  else if(a.length() > b.length()){
+    length = b.length();
+    end = (a.substring(length));}
+  else{
+    length = a.length();}
+    
+  for(int i = 0; i < length; i++){
+    newS = newS + a.charAt(i) + b.charAt(i);}
+  return newS + end;
+}
