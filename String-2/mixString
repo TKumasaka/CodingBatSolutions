@@ -1,7 +1,7 @@
 public String mixString(String a, String b) {
   int length = 0;
-  String newS = "";
   String end = "";
+  StringBuilder sb = new StringBuilder();
     
   if(b.length() > a.length()){
     length = a.length();
@@ -13,6 +13,7 @@ public String mixString(String a, String b) {
     length = a.length();}
     
   for(int i = 0; i < length; i++){
-    newS = newS + a.charAt(i) + b.charAt(i);}
-  return newS + end;
+    sb.append(a.charAt(i));
+    sb.append(b.charAt(i));}
+  return sb.toString() + end;
 }
