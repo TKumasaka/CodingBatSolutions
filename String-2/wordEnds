@@ -1,0 +1,24 @@
+public String wordEnds(String str, String word) {
+  int length = word.length();
+  StringBuilder sb = new StringBuilder();
+  
+  if(!str.contains(word)){
+    sb.append("");}
+  else{
+    //checks if starting letters match
+    if(str.startsWith(word) && str.length() > length){
+      sb.append(str.substring(length, length+1));}
+    for(int i = 1; i < str.length()-length; i++){
+      //check the beginning
+      if(str.substring(i,i+length).equals(word)){
+        sb.append(str.substring(i-1,i));
+        i+=length;
+        sb.append(str.substring(i,i+1));}
+    }
+    //checks if the last characters match the word
+    if(str.endsWith(word) && str.length() > length){
+      int index = str.length()-(length)-1;
+      sb.append(str.substring(index,index+1));}
+  }
+  return sb.toString();
+}
