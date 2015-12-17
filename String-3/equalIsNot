@@ -1,0 +1,11 @@
+public boolean equalIsNot(String str) {
+  return counter(str,"not")==counter(str, "is");}
+  
+public int counter(String str, String compare){
+  int count = 0;
+  for(int i = 0; i < str.length(); i++){
+    if(compare.length() + i <= str.length() && str.substring(i,i+compare.length()).equals(compare)){
+      count++;
+      i+=compare.length()-1;}}
+  return count;
+}
