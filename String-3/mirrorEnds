@@ -1,0 +1,12 @@
+public String mirrorEnds(String string) {
+  StringBuilder sb = new StringBuilder();
+  sb.append(string);
+  String flip = sb.reverse().toString();
+  String mirror = "";
+  for(int i = 0; i <= string.length(); i++){
+    if(string.substring(0,i).equals(flip.substring(0,i))){
+      mirror = string.substring(0,i);
+    }
+  }
+  return mirror;
+}
