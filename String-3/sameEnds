@@ -1,0 +1,11 @@
+public String sameEnds(String string) {
+  String same = "";
+  //start halfway to avoid overlapping
+  for(int i = 0; i <= string.length()/2; i++){
+    for(int j = string.length()/2; j < string.length(); j++){
+      if(string.substring(0,i).equals(string.substring(j))){
+        same = string.substring(j);} 
+    }
+  }
+  return same;
+}
