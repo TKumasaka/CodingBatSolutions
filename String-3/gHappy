@@ -1,0 +1,18 @@
+public boolean gHappy(String str) {
+  boolean happy = false;
+  //store new string to deal with first and last occurrences of 'g'
+  String nstr = "A"+str+"A";
+  
+  if(str.length()==0){
+    happy = true;}
+  
+  for(int i = 1; i < nstr.length()-1; i++){
+    if(nstr.charAt(i)=='g'){
+      if(nstr.charAt(i-1)=='g' || nstr.charAt(i+1)=='g'){
+        happy = true;}
+      else{
+        happy = false;
+        break;}}
+   }
+  return happy;
+}
