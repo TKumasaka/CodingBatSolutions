@@ -1,0 +1,18 @@
+public int countClumps(int[] nums) {
+  int counter = 0;
+  boolean clump = false;
+  
+  //if there is a clump at the end
+  if(nums.length > 1){
+    if(nums[nums.length-1] == nums[nums.length-2]){
+      counter++;}
+  }
+  for(int i = 0; i < nums.length-1; i++){
+    if(nums[i] == nums[i+1]){
+      clump = true;}
+    else if(clump){
+      counter++;
+      clump = false;}
+  }
+  return counter;
+}
