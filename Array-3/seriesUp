@@ -1,0 +1,14 @@
+public int[] seriesUp(int n) {
+  int[] result = new int[n*(n+1)/2];
+  int sect = 0;
+  for(int i = 1; i <= n; i++){
+    int put = 1;
+ 
+    for(int j = 0; j < i; j++){
+      result[sect] = put;
+      put++;
+      sect++;
+    }
+  }
+  return result;
+}
