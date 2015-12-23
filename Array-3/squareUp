@@ -1,0 +1,17 @@
+public int[] squareUp(int n) {
+  int[] result = new int[n*n];
+  //for each subsect
+  for(int i = 1; i <= n; i++){
+    //add zeros to each n subsects
+    int numZeros = n-i;
+    for(int j = i*n; j < (i*n)-i; j++){
+      result[j] = 0;}
+    
+    //add other numbers to end of each n subsects
+    int num = i;
+    for(int k = (i*n)-i; k < i*n; k++){
+      result[k] = num;
+      num--;}
+  }
+  return result;
+}
