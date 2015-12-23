@@ -1,0 +1,14 @@
+public boolean linearIn(int[] outer, int[] inner) {
+  boolean match = false;
+  int numMatch = 0;
+  if(inner.length == 0){
+    match = true;}
+  for(int i = 0; i < outer.length; i++){
+    if(inner.length > 0 && outer[i] == inner[numMatch]){
+      numMatch++;}
+    if(numMatch == inner.length){
+      match = true;
+      break;}
+  }
+  return match;
+}
