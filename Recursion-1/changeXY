@@ -1,0 +1,9 @@
+public String changeXY(String str) {
+  if(str.length() < 1){
+    return str;}
+  else if(str.endsWith("x")){
+    return changeXY(str.substring(0,str.length()-1)) + "y";}
+  else{
+    return changeXY(str.substring(0,str.length()-1)) + str.substring(str.length()-1);
+  }
+}
